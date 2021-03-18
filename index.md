@@ -1,37 +1,38 @@
-## Welcome to GitHub Pages
+<!-- main html file for CRUD (php version) -->
+<?php echo $CRUD["MESSAGES"] ?><?php echo $CRUD["ERRORS"] ?>
+<div class="form">
+<form action="<?php echo $CRUD["SELF"] ?>" method="post" name="album">
+    <p class="subheading"><?php echo $CRUD["FORM_HEAD"] ?></p>
 
-You can use the [editor on GitHub](https://github.com/ivan-stoyanov-lab/sql-practice/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+    <table class="form">
+    <tr>
+        <td><p class="Afield"> Title:</p></td>
+        <td><input class="Afield" type="text" name="Atitle" value="<?php echo $CRUD["Atitle"] ?>"> </td>
+    </tr>
+    <tr>
+        <td><p class="Afield"> Artist:</p></td>
+        <td><input class="Afield" type="text" name="Aartist" value="<?php echo $CRUD["Aartist"] ?>"> </td>
+    </tr>
+    <tr>
+        <td><p class="Afield"> Label:</p></td>
+        <td><input class="Afield" type="text" name="Alabel" value="<?php echo $CRUD["Alabel"] ?>"> </td>
+    </tr>
+    <tr class="released">
+        <td><p class="Afield"> Released:</p></td>
+        <td>
+            Day <input class="day" type="text" name="Areleased_day" value="<?php echo $CRUD["Areleased_day"] ?>"> &nbsp;
+            Month <?php album_month_select() ?> &nbsp;
+            Year <input class="year" type="text" name="Areleased_year" value="<?php echo $CRUD["Areleased_year"] ?>"> &nbsp;
+        </td>
+    </tr>
+    <tr class="buttons"><td colspan="2">
+<p class="buttons">
+<?php echo $CRUD["BUTTONS"] ?><?php echo $CRUD["HIDDENS"] ?>
+</p>
+    </td></tr>
+    </table>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ivan-stoyanov-lab/sql-practice/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+</form>
+</div>
+<?php echo $CRUD["PRECONTENT"] ?><?php echo $CRUD["CONTENT"] ?><?php echo $CRUD["POSTCONTENT"] ?>
